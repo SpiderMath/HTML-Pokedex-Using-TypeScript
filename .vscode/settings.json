@@ -1,0 +1,7 @@
+{
+	"liveServer.settings.port": 6969,
+	"workbench.colorTheme": "Atom One Light",
+	"powermode.presets": "particles",
+	"powermode.enableShake": false,
+	"powermode.enabled": true
+}
