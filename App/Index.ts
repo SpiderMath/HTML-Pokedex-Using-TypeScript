@@ -33,6 +33,7 @@ async function fetchData(start: number, end: number) {
 	currentlyRequesting = false;
 }
 
+// eslint-disable-next-line no-unused-vars
 async function LoadMore() {
 	if(currentlyRequesting) return alert("Pokemons are currently being loaded, please wait for them to finish, to load more!");
 
