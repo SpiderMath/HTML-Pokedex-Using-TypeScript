@@ -25,8 +25,9 @@ async function fetchData(start: number, end: number) {
 		const poke = await getPokemon(i);
 		container.innerHTML += `
 					<div>
-						<h3>${poke.name.replace(/-/g, " ").split(" ").map(str => str.split("")[0].toUpperCase() + str.slice(1)).join(" ")}(${poke.id})</h3>
-						<img src="${poke.sprites.front_default}">
+						<span id="poke-id">${poke.id}</span>
+						<img src="${poke.sprites.front_default}" alt="${poke.name}">
+						<span name="poke-name"> ${poke.name.replace(/-/g, " ").split(" ").map(str => str.split("")[0].toUpperCase() + str.slice(1)).join(" ")}</span>
 					</div>
 				`;
 	}
@@ -37,9 +38,9 @@ async function fetchData(start: number, end: number) {
 async function LoadMore() {
 	if(currentlyRequesting) return alert("Pokemons are currently being loaded, please wait for them to finish, to load more!");
 
-	await fetchData(numberOfPokemons + 1, numberOfPokemons + 100);
+	await fetchData(numberOfPokemons + 1, numberOfPokemons + 50);
 
-	numberOfPokemons += 100;
+	numberOfPokemons += 50;
 
 	if(numberOfPokemons >= Upperlimit) {
 		const button = document.getElementById("loadmore");

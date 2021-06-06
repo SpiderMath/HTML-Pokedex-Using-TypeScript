@@ -1,0 +1,9 @@
+#pokeid {
+	font-weight: bold;
+	font-style: oblique;
+}
+
+#pokename {
+	font-weight: lighter;
+	font-style: italic;
+}
